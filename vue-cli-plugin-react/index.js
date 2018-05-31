@@ -6,7 +6,8 @@ module.exports = (api, options) => {
 
     webpackConfig.resolve.alias.set('src', webpackConfig.resolve.alias.get('@'));
 
-    const { momentLocale, bundleAnalyzer } = options.pluginOptions || {};
+    const pluginOptions = options.pluginOptions || {};
+    const { momentLocale, bundleAnalyzer } = pluginOptions.react || {};
 
     momentLocale && webpackConfig.plugin('context-replacement')
       .use(require('webpack').ContextReplacementPlugin, [/moment[\/\\]locale$/,
