@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-react",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "@vue/cli plugin for react",
   "repository": "https://github.com/zlab/vue-cli-plugin-react",
   "main": "index.js",
@@ -12,8 +12,8 @@
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
     "@babel/preset-react": "7.0.0-beta.47",
-    "babel-plugin-import": "^1.7.0",
-    "webpack": "^4.10.2",
+    "babel-plugin-import": "^1.8.0",
+    "webpack": "^4.12.0",
     "webpack-bundle-analyzer": "^2.13.1"
   }
 }
