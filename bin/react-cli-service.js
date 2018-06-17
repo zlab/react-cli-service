@@ -6,17 +6,18 @@ const config = require('path').resolve(process.cwd(), 'react.config.js');
 
 process.env.VUE_CLI_SERVICE_CONFIG_PATH = config;
 
-const idToPlugin = id => ({
-  id: 'built-in:' + id,
-  apply: require(id),
-});
+const idToPlugin = id => ({ id, apply: require(id) });
 
 const Service = require('@vue/cli-service');
+
 const service = new Service(process.cwd(), {
   plugins: [
-    '@vue/cli-plugin-babel',
-    '@vue/cli-plugin-eslint',
-    'vue-cli-plugin-react'].map(idToPlugin),
+    idToPlugin('@vue/cli-plugin-babel'),
+    idToPlugin('@vue/cli-plugin-eslint'),
+    {
+      id: 'vue-cli-plugin-react',
+      apply: require('../'),
+    }],
 });
 
 const rawArgv = process.argv.slice(2);

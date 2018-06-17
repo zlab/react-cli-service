@@ -13,8 +13,8 @@ module.exports = (api, options) => {
       .use(require('webpack').ContextReplacementPlugin, [/moment[\/\\]locale$/,
         momentLocale]);
 
-    bundleAnalyzer && webpackConfig.plugin('bundle-analyzer')
-      .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+    // bundleAnalyzer && webpackConfig.plugin('bundle-analyzer')
+    //   .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
   });
 
   api.configureDevServer(devServerConfig => {
