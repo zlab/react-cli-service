@@ -1,6 +1,6 @@
 {
   "name": "react-cli-service",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "react cli service used @vue/cli-service",
   "repository": "https://github.com/zlab/vue-cli-service",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.4",
     "@vue/cli-service": "^3.0.0-rc.4",
     "babel-plugin-import": "^1.8.0",
-    "eslint": "^5.1.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.10.0",
     "webpack": "^4.16.0"
   }
