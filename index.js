@@ -1,15 +1,23 @@
 module.exports = (api, options) => {
-  api.chainWebpack(webpackConfig => {
-    webpackConfig.plugins.delete('progress');
+  api.chainWebpack(chainConfig => {
+    chainConfig.plugins.delete('progress');
+    chainConfig.plugins.delete('preload');
+    chainConfig.plugins.delete('prefetch');
 
-    webpackConfig.performance.hints(false);
+    chainConfig.performance.hints(false);
 
-    webpackConfig.resolve.alias.set('src', webpackConfig.resolve.alias.get('@'));
+    chainConfig.resolve.alias.set('src', chainConfig.resolve.alias.get('@'));
+
+    chainConfig.plugin('html').tap(args => {
+      args[0].chunksSortMode = 'dependency';
+      args[0].minify = false;
+      return args;
+    });
 
     const pluginOptions = options.pluginOptions || {};
     const { momentLocale, bundleAnalyzer } = pluginOptions.react || {};
 
-    momentLocale && webpackConfig.plugin('context-replacement')
+    momentLocale && chainConfig.plugin('context-replacement')
       .use(require('webpack').ContextReplacementPlugin, [/moment[\/\\]locale$/,
         momentLocale]);
 
