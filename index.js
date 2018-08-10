@@ -8,11 +8,11 @@ module.exports = (api, options) => {
 
     chainConfig.resolve.alias.set('src', chainConfig.resolve.alias.get('@'));
 
-    chainConfig.plugin('html').tap(args => {
-      args[0].chunksSortMode = 'dependency';
-      args[0].minify = false;
-      return args;
-    });
+    // chainConfig.plugin('html').tap(args => {
+    //   args[0].chunksSortMode = 'dependency';
+    //   args[0].minify = false;
+    //   return args;
+    // });
 
     const pluginOptions = options.pluginOptions || {};
     const { momentLocale, bundleAnalyzer } = pluginOptions.react || {};
