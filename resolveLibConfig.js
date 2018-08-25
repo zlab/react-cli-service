@@ -33,13 +33,9 @@ module.exports = (api, { entry, name }, options) => {
     config.optimization.minimize(false);
 
     // externalize Vue in case user imports it
-    config.externals({
-      antd: {
-        commonjs: 'antd',
-        commonjs2: 'antd',
-        root: 'antd',
-      },
-    });
+    // config.externals({
+    //   antd: 'antd',
+    // });
 
     // resolve entry/output
     const entryName = `${libName}.${postfix}`;
@@ -51,16 +47,8 @@ module.exports = (api, { entry, name }, options) => {
     // set entry/output after user configureWebpack hooks are applied
     const rawConfig = api.resolveWebpackConfig(config);
 
-    let realEntry = require.resolve('./entry-lib.js');
-
-    // avoid importing default if user entry file does not have default export
-    const entryContent = fs.readFileSync(fullEntryPath, 'utf-8');
-    if (!/\b(export\s+default|export\s{[^}]+as\s+default)\b/.test(entryContent)) {
-      realEntry = require.resolve('./entry-lib-no-default.js');
-    }
-
     rawConfig.entry = {
-      [entryName]: realEntry,
+      [entryName]: entry,
     };
 
     rawConfig.output = Object.assign({

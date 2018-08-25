@@ -16,10 +16,10 @@ module.exports = (api, options) => {
 
     const pluginOptions = options.pluginOptions || {};
     const { momentLocale } = pluginOptions.react || {};
+    const { ContextReplacementPlugin } = require('webpack');
 
     momentLocale && chainConfig.plugin('context-replacement')
-      .use(require('webpack').ContextReplacementPlugin, [/moment[\/\\]locale$/,
-        momentLocale]);
+      .use(ContextReplacementPlugin, [/moment[\/\\]locale$/, momentLocale]);
   });
 
   api.configureDevServer(devServerConfig => {
@@ -30,14 +30,13 @@ module.exports = (api, options) => {
     description: 'library for production',
     usage: 'react-cli-service library [options] [entry|pattern]',
     options: {
-      '--name': `name for lib or web-component mode (default: "name" in package.json or entry filename)`,
+      '--name': `name for lib (default: "name" in package.json or entry filename)`,
       '--report': `generate report.html to help analyze bundle content`,
     },
-  }, async (args) => {
-
+  }, (args) => {
     args.entry = args.entry || args._[0];
 
-    await build(args, api, options);
+    build(args, api, options);
   });
 };
 
@@ -55,8 +54,7 @@ async function build(args, api, options) {
   log();
 
   const mode = api.service.mode;
-  const buildMode = 'library (commonjs + umd)';
-  logWithSpinner(`Building for ${mode} as ${buildMode}...`);
+  logWithSpinner(`Building for ${mode} as library commonjs...`);
 
   const targetDir = api.resolve(options.outputDir);
 
@@ -65,12 +63,11 @@ async function build(args, api, options) {
 
   if (args.report) {
     const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-    const bundleName = webpackConfig.output.filename.replace(/\.js$/, '-');
     webpackConfig.plugins.push(new BundleAnalyzerPlugin({
       logLevel: 'warn',
       openAnalyzer: false,
       analyzerMode: 'static',
-      reportFilename: `${bundleName}report.html`,
+      reportFilename: `report.html`,
     }));
   }
 
