@@ -14,6 +14,21 @@ module.exports = (api, options) => {
     //   return args;
     // });
 
+    /*const svgRule = config.module.rule('svg');
+
+    svgRule.uses.clear();
+
+    svgRule.test(/\.svg(\?v=\d+\.\d+\.\d+)?$/)
+      .use('babel')
+      .loader('babel-loader')
+      .end()
+      .use('svgr')
+      .loader('@svgr/webpack')
+      .options({
+        babel: false,
+        icon: true,
+      });*/
+
     const pluginOptions = options.pluginOptions || {};
     const { momentLocale } = pluginOptions.react || {};
     const { ContextReplacementPlugin } = require('webpack');
