@@ -1,6 +1,6 @@
 {
   "name": "react-cli-service",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "react cli service used @vue/cli-service",
   "repository": "https://github.com/zlab/vue-cli-service",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "@vue/cli-plugin-babel": "^3.4.1",
