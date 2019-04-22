@@ -1,8 +1,8 @@
 {
   "name": "react-cli-service",
-  "version": "1.6.2",
-  "description": "react cli service used @vue/cli-service",
-  "repository": "https://github.com/zlab/vue-cli-service",
+  "version": "1.6.3",
+  "description": "react cli service used @vue/cli",
+  "repository": "https://github.com/zlab/react-cli-service",
   "main": "index.js",
   "author": "zhanqi",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "react-cli-service": "bin/react-cli-service.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "yarn upgrade-interactive"
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
@@ -19,7 +19,9 @@
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-plugin-eslint": "^3.6.0",
     "@vue/cli-service": "^3.6.0",
+    "@vue/cli-shared-utils": "^3.6.0",
     "babel-plugin-import": "^1.11.0",
+    "eslint": "4",
     "eslint-plugin-react": "^7.12.4",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.30.0"
