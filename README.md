@@ -2,7 +2,29 @@
 
 比`create-react-app`更好用的`react cli`
 
-## 下载项目模版
+目录结构参考[https://github.com/zlab/react-cli-demo](https://github.com/zlab/react-cli-demo)
+
+## 已有项目
+```
+npm i react-cli-service -D
+``` 
+
+## package.json
+```
+"scripts": {
+    "serve": "react-cli-service serve",
+    "build": "react-cli-service build --report"
+},
+```
+
+## 配置
+新增`react.config.js`
+
+## 入口
+默认入口为`src/main.js`
+
+# 新项目
+## 下载模版
 ```
 git clone https://github.com/zlab/react-cli-demo my-project
 cd my-project
