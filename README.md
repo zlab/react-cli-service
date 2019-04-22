@@ -2,7 +2,7 @@
 
 比`create-react-app`更好用的`react cli`
 
-##目录结构
+## 目录结构
 参考[https://github.com/zlab/react-cli-demo](https://github.com/zlab/react-cli-demo)
 
 ## 已有项目
