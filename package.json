@@ -1,6 +1,6 @@
 {
   "name": "react-cli-service",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "react cli service used @vue/cli",
   "repository": "https://github.com/zlab/react-cli-service",
   "main": "index.js",
@@ -13,17 +13,17 @@
     "update": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "@vue/cli-shared-utils": "^3.7.0",
-    "babel-plugin-import": "^1.11.0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/cli-shared-utils": "^3.8.0",
+    "babel-plugin-import": "^1.11.2",
     "eslint": "4",
     "eslint-plugin-react": "^7.13.0",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.30.0"
+    "webpack": "^4.32.2"
   }
 }
