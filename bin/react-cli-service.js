@@ -14,6 +14,7 @@ const service = new Service(process.cwd(), {
   plugins: [
     idToPlugin('@vue/cli-plugin-babel'),
     idToPlugin('@vue/cli-plugin-eslint'),
+    // idToPlugin('@vue/cli-plugin-typescript'),
     {
       id: 'vue-cli-plugin-react',
       apply: require('../'),
