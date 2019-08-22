@@ -8,3 +8,5 @@ package-lock.json
 .prettierrc
 .eslintrc.js
 .eslintignore
+
+yarn-error.log
