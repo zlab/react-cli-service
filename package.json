@@ -1,6 +1,6 @@
 {
   "name": "react-cli-service",
-  "version": "1.9.14",
+  "version": "1.10.0",
   "description": "react cli service used @vue/cli",
   "repository": "https://github.com/zlab/react-cli-service",
   "main": "index.js",
@@ -13,21 +13,21 @@
     "update": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/plugin-proposal-optional-chaining": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "@vue/cli-plugin-babel": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
-    "@vue/cli-plugin-typescript": "^4.4.6",
-    "@vue/cli-service": "^4.4.6",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-plugin-typescript": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-import": "^1.13.0",
-    "core-js": "^3.6.5",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "typescript": "^3.9.5",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0"
+    "babel-plugin-import": "^1.13.3",
+    "core-js": "^3.10.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "typescript": "^4.2.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "4"
   }
 }
